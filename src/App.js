@@ -1,12 +1,10 @@
 import "./App.css";
-import CardBar from "./components/CardBar";
-import TopBar from "./components/TopBar";
+import HealthPrompter from "./components/HealthPrompter";
 
 function App() {
   return (
     <div id="app">
-      <TopBar />
-      <CardBar />
+      <HealthPrompter />
     </div>
   );
 }

@@ -3,10 +3,8 @@ import styles from "./CardBar.module.css";
 import Button from "./util/Button";
 import { useState } from "react";
 
-export default function CardBar() {
+export default function CardBar(props) {
   const [inputText, setInputText] = useState("");
-  const [confirmActive, setConfirmActive] = useState("");
-  const classNames = [styles.confirmationText, confirmActive];
 
   const textChangeHandler = (e) => {
     const text = e.target.value;
@@ -16,13 +14,7 @@ export default function CardBar() {
   };
 
   const onClickHandler = () => {
-    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(inputText);
-      setConfirmActive(styles.visible);
-      setTimeout(() => setConfirmActive(""), 1300);
-    } else {
-      console.log("Clipboard API not available");
-    }
+    props.onChange(inputText);
   };
 
   return (
@@ -52,7 +44,12 @@ export default function CardBar() {
             onClick={onClickHandler}
           />
 
-          <p className={classNames.join(" ")}>
+          <p
+            className={[
+              styles.confirmationText,
+              props.confirmed ? styles.visible : "",
+            ].join(" ")}
+          >
             Prompt in Zwischenablage kopiert!
           </p>
         </Card>
