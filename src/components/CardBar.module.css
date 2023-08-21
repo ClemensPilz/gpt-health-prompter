@@ -1,0 +1,8 @@
+.cardBar {
+  display: flex;
+}
+
+.card {
+  width: 50%;
+  min-height: 100%;
+}

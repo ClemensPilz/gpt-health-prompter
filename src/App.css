@@ -1,0 +1,13 @@
+html {
+  background-color: #20242b;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  background-color: #20242b;
+}
