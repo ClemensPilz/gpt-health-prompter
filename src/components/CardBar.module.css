@@ -6,3 +6,23 @@
   width: 50%;
   min-height: 100%;
 }
+
+.textArea {
+  width: 100%;
+  height: 300px;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #20242b;
+  color: white;
+}
+
+.confirmationText {
+  color: red;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.confirmationText.visible {
+  opacity: 1;
+}
