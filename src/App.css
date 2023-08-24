@@ -4,11 +4,11 @@
 }
 
 html {
-  background-color: #20242b;
+  background-color: #fafafa;
 }
 
 #app {
-  width: 900px;
+  max-width: 900px;
   margin: 20px auto 0;
-  background-color: #20242b;
+  background-color: #fafafa;
 }

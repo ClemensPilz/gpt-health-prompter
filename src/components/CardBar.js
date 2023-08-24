@@ -31,11 +31,11 @@ export default function CardBar(props) {
 
       <div className={styles.card}>
         <Card>
+          <h3>GPT Prompt Generator</h3>
           <p>
-            Bitte geben Sie Ihren Text in das linke Feld ein. Wählen Sie in der
-            Leiste oben Länge und Temperatur des gewünschten Outputs. Ein Klick
-            auf den Button kopiert den Prompt anschließend direkt in die
-            Zwischenablage.
+            Bitte geben Sie Ihren Text in das Feld ein. Wählen Sie in der Leiste
+            oben Länge und Temperatur des gewünschten Outputs. Ein Klick auf den
+            Button kopiert den Prompt anschließend direkt in die Zwischenablage.
           </p>
           <p>Mit Ctrl + V können Sie ihn dann in ChatGPT einfügen.</p>
           <Button
