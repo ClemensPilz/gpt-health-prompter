@@ -1,20 +1,14 @@
 import Card from "./util/Card";
 import styles from "./CardBar.module.css";
 import Button from "./util/Button";
-import { useState } from "react";
+import { useRef } from "react";
 
 export default function CardBar(props) {
-  const [inputText, setInputText] = useState("");
-
-  const textChangeHandler = (e) => {
-    const text = e.target.value;
-    if (text.trim().length > 5) {
-      setInputText(text);
-    }
-  };
+  const userText = useRef();
 
   const onClickHandler = () => {
-    props.onChange(inputText);
+    props.onChange(userText.current.value);
+    console.log(userText.current.value);
   };
 
   return (
@@ -22,7 +16,7 @@ export default function CardBar(props) {
       <div className={styles.card}>
         <Card>
           <textarea
-            onChange={textChangeHandler}
+            ref={userText}
             className={styles.textArea}
             placeholder="Geben Sie Ihren Text ein"
           ></textarea>
