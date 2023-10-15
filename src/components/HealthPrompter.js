@@ -29,7 +29,7 @@ export default function HealthPrompter() {
     prompt.temperature = inputTemperature;
     prompt.article = text;
 
-    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+    if (navigator?.clipboard?.writeText) {
       await navigator.clipboard.writeText(JSON.stringify(prompt));
       setConfirmed(true);
       setTimeout(() => setConfirmed(false), 1300);
